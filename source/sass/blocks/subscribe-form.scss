@@ -1,4 +1,4 @@
-.signup-form {
+.subscribe-form {
   @media (max-width: 1023px) {
     width: 97.7%;
   }
@@ -8,19 +8,19 @@
   }
 }
 
-.signup-form br {
+.subscribe-form br {
   @media (min-width: 768px) {
     display: none;
   }
 }
 
-.signup-form fieldset {
+.subscribe-form fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.signup-form legend {
+.subscribe-form legend {
   margin-bottom: 4px;
   padding: 0;
   font-family: var(--font-secondary);
@@ -39,13 +39,13 @@
   }
 }
 
-.signup-form span:first-of-type {
+.subscribe-form span:first-of-type {
   font-weight: 400;
   line-height: 130%;
   color: var(--c-placeholder);
 }
 
-.signup-form__content {
+.subscribe-form__content {
   display: grid;
   row-gap: 10px;
   margin-top: 40px;
@@ -55,7 +55,7 @@
   }
 }
 
-.signup-form__input-wrapper {
+.subscribe-form__input-wrapper {
   padding-bottom: 6px;
   border-bottom: 1px solid currentColor;
 
@@ -65,7 +65,7 @@
   }
 }
 
-.signup-form input {
+.subscribe-form input {
   width: 100%;
   font-family: var(--font-main);
   font-size: 14px;
@@ -82,7 +82,7 @@
   }
 }
 
-.signup-form [type="submit"] {
+.subscribe-form [type="submit"] {
   margin-right: 12px;
   padding: 0;
   font-family: inherit;
@@ -109,7 +109,7 @@
   }
 }
 
-.signup-form [type="submit"] + svg {
+.subscribe-form [type="submit"] + svg {
   stroke: currentColor;
   transform: rotateZ(180deg);
   transition: transform 0.2s;
