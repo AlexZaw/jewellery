@@ -1,0 +1,32 @@
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  order: 2;
+  margin-left: 15px;
+  border: 0;
+  font-family: var(--font_main);
+  font-size: 14px;
+  font-weight: 500;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--c-placeholder);
+  }
+}
+
+.search-form [type="submit"] {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+
+  &:hover svg {
+    fill: var(--c-search-hover);
+  }
+}

@@ -1,0 +1,13 @@
+.user-links {
+  @include reset-list;
+  display: grid;
+  column-gap: 35px;
+  grid-template-columns: repeat(2, max-content);
+  justify-items: end;
+}
+
+.user-links a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--c-text);
+}

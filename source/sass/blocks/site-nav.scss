@@ -1,0 +1,28 @@
+.site-nav {
+  position: relative;
+  padding-top: 19px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: calc(calc(100vw + 100%) / 2);
+    width: 100vw;
+    height: 1px;
+    box-shadow: 100vw 0 0 var(--bd-site-nav);
+  }
+}
+
+.site-nav ul {
+  @include reset-list;
+  display: grid;
+  column-gap: 35px;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--c-text);
+}
+

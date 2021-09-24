@@ -1,0 +1,116 @@
+.signup-form {
+  @media (max-width: 1023px) {
+    width: 97.7%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.signup-form br {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.signup-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.signup-form legend {
+  margin-bottom: 4px;
+  padding: 0;
+  font-family: var(--font-secondary);
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  color: inherit;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+.signup-form span:first-of-type {
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--c-placeholder);
+}
+
+.signup-form__content {
+  display: grid;
+  row-gap: 10px;
+  margin-top: 40px;
+
+  @media (max-width: 767px) {
+    margin-top: 36px;
+  }
+}
+
+.signup-form__input-wrapper {
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+
+  &--last {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+}
+
+.signup-form input {
+  width: 100%;
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  color: inherit;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--c-placeholder);
+  }
+}
+
+.signup-form [type="submit"] {
+  margin-right: 12px;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 130%;
+  color: inherit;
+  border: 0;
+  background: transparent;
+  transition: text-shadow 0.2s;
+
+
+  &:hover,
+  &:focus {
+    text-shadow: 0 0 5px currentColor;
+
+    + svg {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    margin-right: 8px;
+  }
+}
+
+.signup-form [type="submit"] + svg {
+  stroke: currentColor;
+  transform: rotateZ(180deg);
+  transition: transform 0.2s;
+}

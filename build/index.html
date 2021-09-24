@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,152 @@
   <link rel="preload" href="./fonts/cormorant-garamond-v10-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
-<body class="page__body">
 
+<body class="page__body">
+  <div class="grid">
+    <div class="grid-overlay"></div>
+  </div>
+  <header class="page-header">
+    <div class="page__container">
+      <div class="page-header__wrapper">
+        <form class="search-form page-header__search" action="https://echo.htmlacademy.ru/" method="POST">
+          <input type="text" name="search" placeholder="Type here to search" autocomplete="off">
+          <button type="submit">
+            <span class="page__a11y-hidden">Find</span>
+            <svg width="14" height="14" viewbox="0 0 14 14">
+              <use xlink:href="./img/sprite_auto.svg#icon-search">
+              </use>
+            </svg>
+          </button>
+        </form>
+        <a class="logo page-header__logo">
+          <img src="./img/logo.svg" alt="CH Company" width="66" height="66">
+        </a>
+        <ul class="user-links page-header__user-links">
+          <li>
+            <a class="user-links__login" href="#">Login</a>
+          </li>
+          <li>
+            <a class="user-links__cart" href="#">Cart <span class="user-links__products-count" id="products-count">0</span></a>
+          </li>
+        </ul>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li>
+            <a href="#">What’s new</a>
+          </li>
+          <li>
+            <a href="#">Chokers</a>
+          </li>
+          <li>
+            <a href="#">Necklaces</a>
+          </li>
+          <li>
+            <a href="#">Rings</a>
+          </li>
+          <li>
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main></main>
+  <footer class="page-footer">
+    <div class="page__container">
+      <div class="page-footer__wrapper">
+        <form class="signup-form page-footer__signup-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset>
+            <legend>The good stuff <br aria-hidden="true"> in your inbox </legend>
+            <span>News and updates from CH. No spam, we promise.</span>
+            <div class="signup-form__content">
+              <div class="signup-form__input-wrapper signup-form__input-wrapper--last">
+                <input type="email" placeholder="Your E-mail" required="">
+                <div class="signup-form__submit">
+                  <button type="submit">Sign Up</button>
+                  <svg width="30" height="11" viewbox="0 0 30 11">
+                    <use xlink:href="./img/sprite_auto.svg#icon-arrow">
+                    </use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="page-footer__list page-footer__list--links">
+          <ul>
+            <li>
+              <a href="#">Ordering & Payment</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#">Returns & Exchanges</a>
+            </li>
+            <li>
+              <a href="#">Delivery</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">About CH</a>
+            </li>
+            <li>
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li>
+              <a href="#">Jobs</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__list page-footer__list--social">
+          <ul>
+            <li>
+              <a href="#">
+                <svg width="15" height="15" viewbox="0 0 8 15">
+                  <use xlink:href="./img/sprite_auto.svg#icon-fb">
+                  </use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="15" height="15" viewbox="0 0 15 15">
+                  <use xlink:href="./img/sprite_auto.svg#icon-instagram">
+                  </use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="15" viewbox="0 0 16 15">
+                  <use xlink:href="./img/sprite_auto.svg#icon-pinterest">
+                  </use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="15" height="15" viewbox="0 0 15 13">
+                  <use xlink:href="./img/sprite_auto.svg#icon-twitter">
+                  </use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

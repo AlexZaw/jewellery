@@ -1,0 +1,18 @@
+:root {
+  // Global
+
+  --font-main: "Poppins", "Arial", sans-serif;
+  --font-secondary: "Cormorant Garamond", "Times New Roman", serif;
+  --font-size: 16px;
+  --c-text: hsla(21 21% 9% / 1);
+  --c-placeholder: hsla(30 2% 60% / 1);
+
+  //Header
+
+  --bd-site-nav: hsla(30 10% 96% / 1);
+  --c-search-hover: hsla(21 29% 52% / 1);
+
+  // Footer
+  --bg-page-footer: hsla(0 0% 0% / 1);
+  --c-text-footer: hsla(0 0% 100% / 1);
+}
