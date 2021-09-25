@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +11,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--promo-overlay);
+  }
+
   .no-webp & {
     background-image: image-set(url("../img/main/promo/promo-main-bg-desktop@2x.jpg") 2x, url("../img/main/promo/promo-main-bg-desktop@1x.jpg") 1x);
   }
@@ -18,7 +28,7 @@
     background-image: image-set(url("../img/main/promo/promo-main-bg-desktop@2x.webp") 2x, url("../img/main/promo/promo-main-bg-desktop@1x.webp") 1x);
   }
 
-  @media (max-width: 1023px){
+  @media (max-width: 1023px) {
     background-image: image-set(url("../img/main/promo/promo-main-bg-tablet@2x.jpg") 2x, url("../img/main/promo/promo-main-bg-tablet@1x.jpg") 1x);
     /* stylelint-disable-next-line */
     background-image: image-set(url("../img/main/promo/promo-main-bg-tablet@2x.webp") 2x, url("../img/main/promo/promo-main-bg-tablet@1x.webp") 1x);
@@ -32,7 +42,7 @@
     }
   }
 
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     background-image: image-set(url("../img/main/promo/promo-main-bg-mobile@2x.jpg") 2x, url("../img/main/promo/promo-main-bg-mobile@1x.jpg") 1x);
     /* stylelint-disable-next-line */
     background-image: image-set(url("../img/main/promo/promo-main-bg-mobile@2x.webp") 2x, url("../img/main/promo/promo-main-bg-mobile@1x.webp") 1x);
@@ -56,7 +66,7 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--c-text-promo);
-
+  z-index: 1;
   @media (max-width: 767px) {
     font-size: 38px;
   }

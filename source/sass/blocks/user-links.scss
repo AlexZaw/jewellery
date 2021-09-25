@@ -8,6 +8,22 @@
 
 .user-links a {
   font-size: 14px;
-  text-decoration: none;
-  color: var(--c-text);
+}
+
+.user-links__login {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.user-links__cart-icon {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.user-links__cart-text {
+  @media (max-width: 1023px) {
+    display: none;
+  }
 }

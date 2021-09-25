@@ -1,0 +1,7 @@
+.info-nav {
+  @include reset-list;
+  display: none;
+  row-gap: 15px;
+  font-size: 18px;
+  color: var(--c-info-link);
+}

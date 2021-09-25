@@ -1,1 +1,16 @@
-//
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 66px;
+  height: 66px;
+  background-color: var(--c-accent);
+  mask-image: url("../img/logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+
+  @media (max-width: 767px) {
+    width: 52px;
+    height: 52px;
+  }
+}

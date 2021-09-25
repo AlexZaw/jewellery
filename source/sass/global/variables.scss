@@ -6,14 +6,23 @@
   --font-size: 16px;
   --c-text: hsla(21 21% 9% / 1);
   --c-placeholder: hsla(30 2% 60% / 1);
+  --c-accent: hsla(21 29% 52% / 1);
+
 
   //Header
+  --c-text-mobile: hsla(0 0% 100% / 1);
   --bd-site-nav: hsla(30 10% 96% / 1);
-  --c-search-hover: hsla(21 29% 52% / 1);
+  --bg-mobile-form: hsla(0 0% 100% / 0.15);
+
+  // Info list
+  --c-info-link: hsla(0 0% 100% / 0.75);
 
   //Promo
   --c-text-promo: hsla(0 0% 100% / 1);
+  --promo-overlay: hsla(21 25% 27% / 0.7);
 
+  // Blog
+  --bg-blog-content: hsla(30 29% 92% / 1);
 
   // Footer
   --bg-page-footer: hsla(0 0% 0% / 1);

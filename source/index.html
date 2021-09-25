@@ -20,56 +20,171 @@
   <div class="grid">
     <div class="grid-overlay"></div>
   </div>
-  <header class="page-header">
+  <header class="page-header page-header--menu-open2">
     <div class="page__container">
       <div class="page-header__wrapper">
+        <button class="page-header__menu-button">
+          <svg width="25" height="18" viewbox="0 0 25 18" stroke="currentColor">
+            <use xlink:href="./img/sprite_auto.svg#icon-mobile-menu">
+            </use>
+          </svg>
+        </button>
         <form class="search-form page-header__search" action="https://echo.htmlacademy.ru/" method="POST">
           <input type="text" name="search" placeholder="Type here to search" autocomplete="off">
-          <button type="submit">
-            <span class="page__a11y-hidden">Find</span>
+          <button type="submit" aria-label="Find">
             <svg width="14" height="14" viewbox="0 0 14 14">
               <use xlink:href="./img/sprite_auto.svg#icon-search">
               </use>
             </svg>
           </button>
         </form>
-        <a class="logo page-header__logo">
-          <img src="./img/logo.svg" alt="CH Company" width="66" height="66">
-        </a>
+        <a class="logo page-header__logo"><span class="page__a11y-hidden">CH Company</span></a>
         <ul class="user-links page-header__user-links">
           <li>
-            <a class="user-links__login" href="#">Login</a>
+            <a class="link user-links__login" href="#">Login</a>
           </li>
           <li>
-            <a class="user-links__cart" href="#">Cart <span class="user-links__products-count"
-                id="products-count">0</span></a>
+            <a class="link user-links__cart" href="#">
+              <svg class="user-links__cart-icon" width="20" height="18" viewbox="0 0 20 18" stroke="currentColor" fill="none">
+                <use xlink:href="./img/sprite_auto.svg#icon-cart">
+                </use>
+              </svg>
+              <span class="user-links__cart-text">
+              Cart
+              <span class="user-links__products-count" id="products-count">0</span>
+              </span>
+            </a>
           </li>
         </ul>
       </div>
-      <nav class="site-nav">
+      <nav class="site-nav page-header__site-nav">
         <ul>
           <li>
-            <a href="#">What’s new</a>
+            <a class="link" href="#">What’s new</a>
           </li>
           <li>
-            <a href="#">Chokers</a>
+            <a class="link" href="#">Chokers</a>
           </li>
           <li>
-            <a href="#">Necklaces</a>
+            <a class="link" href="#">Necklaces</a>
           </li>
           <li>
-            <a href="#">Rings</a>
+            <a class="link" href="#">Rings</a>
           </li>
           <li>
-            <a href="#">Earrings</a>
+            <a class="link" href="#">Earrings</a>
           </li>
         </ul>
       </nav>
+      <ul class="info-nav page-header__info-nav">
+        <li>
+          <a class="link" href="#">About CH</a>
+        </li>
+        <li>
+          <a class="link" href="#">Stores & Hours</a>
+        </li>
+        <li>
+          <a class="link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <a href="#" class="link page-header__mobile-login">Login</a>
     </div>
   </header>
   <main>
     <section class="promo">
       <h1>Perfection <span>made to be yours</span></h1>
+    </section>
+    <section class="blog">
+      <div class="page__container">
+          <h2>Blog</h2>
+          <a class="link link--underline" href="#">Read All</a>
+          <div class="blog__list-wrapper">
+          <ul class="blog__list">
+            <li>
+              <img src="./img/main/blog/how-to-care-desktop@1x.jpg" width="285" height="300" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-30">September 30, 2019</time>
+                <h3>How to care for
+                  your jewellery</h3>
+                  <a class="link link--underline" href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/power-of-crystals-desktop@1x.jpg" width="285" height="300" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a class="link link--underline" href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/trends-desktop@1x.jpg" width="570" height="630" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-16">September 16, 2019</time>
+                <h3>AW 19 trends</h3>
+                <a class="link link--underline" href="#">Read Article</a>
+              </div>
+            </li>
+
+
+            <!-- <li>
+              <img src="./img/main/blog/how-to-care-desktop@1x.jpg" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/power-of-crystals-desktop@1x.jpg" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/trends-desktop@1x.jpg"  alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>            <li>
+              <img src="http://placekitten.com/1000"  alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="http://placekitten.com/100" alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/trends-desktop@1x.jpg"  alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li>
+            <li>
+              <img src="./img/main/blog/trends-desktop@1x.jpg"  alt="blog image">
+              <div class="blog__content">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
