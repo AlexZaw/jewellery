@@ -9,7 +9,7 @@
     right: calc(calc(100vw + 100%) / 2);
     width: 100vw;
     height: 1px;
-    box-shadow: 100vw 0 0 var(--bd-site-nav);
+    box-shadow: 100vw 0 0 var(--c-line);
   }
 
   @media (max-width: 1023px) {
