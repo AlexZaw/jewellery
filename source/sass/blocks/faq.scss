@@ -70,6 +70,9 @@
 }
 
 .faq__question button {
+  .no-js & {
+    display: none;
+  }
   width: 15px;
   height: 8px;
   margin-top: -7px;
@@ -133,7 +136,8 @@
   height: 0;
   overflow: hidden;
 
-  .faq__question--open ~ & {
+  .faq__question--open ~ &,
+  .no-js & {
     height: auto;
   }
 
