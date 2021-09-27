@@ -66,7 +66,7 @@
 }
 
 .page-header--menu-open,
-.no-js {
+.no-js .page-header {
   @media (max-width: 1023px) {
     padding-bottom: 73px;
     background-color: var(--c-accent);
