@@ -1,0 +1,132 @@
+.filter-form {
+  width: 100%;
+  max-width: 250px;
+}
+
+.filter-form__legend {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 21px;
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus-within {
+    color: var(--c-accent);
+  }
+}
+
+.filter-form__fieldset {
+  position: relative;
+  margin: 0;
+  padding: 0 25px 20px;
+  border: 1px solid var(--c-accent);
+
+  &:not(:last-of-type) {
+    border-bottom: 0;
+  }
+}
+
+.filter-form__accordeon-button {
+  .no-js & {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 8px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.filter-form__fieldset--open .filter-form__accordeon-button {
+  margin-top: -2px;
+  transform: rotateZ(180deg);
+}
+
+
+.filter-form__controls {
+  height: 0;
+  overflow: hidden;
+}
+
+.filter-form__fieldset--open .filter-form__controls {
+  display: grid;
+  row-gap: 8px;
+  height: auto;
+  margin-top: 19px;
+  margin-left: 10px;
+  margin-bottom: 6px;
+
+  &--range {
+    margin-top: 17px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.filter-form__controls input:not([type="number"]) {
+  position: fixed;
+  transform: scale(0);
+}
+
+.filter-form__controls label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.filter-form__controls [type="checkbox"] + label {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--c-accent);
+    transition: background-color 0.2s;
+  }
+}
+
+.filter-form__controls input:hover + label,
+.filter-form__controls input:focus + label {
+  color: var(--c-accent);
+}
+
+.filter-form__controls input:checked + label::before {
+  background-color: var(--c-accent);
+}
+
+.filter-form__buttons {
+  display: grid;
+  row-gap: 25px;
+  margin-top: 31px;
+}
+
+.filter-form [type="submit"],
+.filter-form [type="reset"] {
+  width: 100%;
+  max-width: 250px;
+  padding: 23px 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  border: 1px solid var(--c-accent);
+  color: inherit;
+  background-color: transparent;
+  transition: color 0.2s, background-color 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--c-accent);
+    color: var(--c-button-hover);
+  }
+}

@@ -101,7 +101,93 @@
     <div class="page__container">
       <div class="catalog__content">
     <div class="catalog__filters">
+      <form class="filter-form" action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset class="filter-form__fieldset filter-form__fieldset--open">
+          <div class="filter-form__legend">
+            Product
+          <button class="filter-form__accordeon-button" type="button">
+            <svg class="faq__icon" width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)"
+            fill="none">
+            <use xlink:href="./img/sprite_auto.svg#icon-cap">
+            </use>
+          </svg>
+          </button>
+          </div>
+          <div class="filter-form__controls">
+            <input type="checkbox" id="necklaces" name="necklaces">
+            <label for="necklaces">Necklaces</label>
+            <input type="checkbox" id="chokers" name="chokers">
+            <label for="chokers">Chokers</label>
+            <input type="checkbox" id="rings" name="rings">
+            <label for="rings">Rings</label>
+            <input type="checkbox" id="earrings" name="earrings">
+            <label for="earrings">Earrings</label>
+          </div>
+        </fieldset>
+        <fieldset class="filter-form__fieldset">
+          <div class="filter-form__legend">
+            Material
+          <button class="filter-form__accordeon-button" type="button">
+            <svg class="faq__icon" width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)"
+            fill="none">
+            <use xlink:href="./img/sprite_auto.svg#icon-cap">
+            </use>
+          </svg>
+          </button>
+          </div>
+          <div class="filter-form__controls">
 
+          </div>
+        </fieldset>
+        <fieldset class="filter-form__fieldset">
+          <div class="filter-form__legend">
+            Collection
+          <button class="filter-form__accordeon-button" type="button">
+            <svg class="faq__icon" width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)"
+            fill="none">
+            <use xlink:href="./img/sprite_auto.svg#icon-cap">
+            </use>
+          </svg>
+          </button>
+          </div>
+          <div class="filter-form__controls">
+
+          </div>
+        </fieldset>
+        <fieldset class="filter-form__fieldset filter-form__fieldset--open">
+          <div class="filter-form__legend">
+            Price
+          <button class="filter-form__accordeon-button" type="button">
+            <svg class="faq__icon" width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)"
+            fill="none">
+            <use xlink:href="./img/sprite_auto.svg#icon-cap">
+            </use>
+          </svg>
+          </button>
+          </div>
+          <div class="filter-form__controls filter-form__controls--range">
+            <div class="range-slider filter-form__range-slider">
+              <div class="range-slider__track">
+              <div class="range-slider__bar"></div>
+                <button type="button" class="range-slider__thumb range-slider__thumb--a"></button>
+                <button type="button" class="range-slider__thumb range-slider__thumb--b"></button>
+              </div>
+              <div class="range-slider__output">
+                <label class="range-slider__price range-slider__price--min">
+                  $&nbsp;<input type="number" value="55" name="min-price">
+                </label>
+              <label class="range-slider__price range-slider__price--max">
+                $&nbsp;<input type="number" value="155" name="max-price">
+              </label>
+            </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="filter-form__buttons">
+          <button type="submit">Apply</button>
+          <button type="reset">Clear All</button>
+        </div>
+      </form>
     </div>
     <div class="catalog__products products">
       <ul class="products__list">
