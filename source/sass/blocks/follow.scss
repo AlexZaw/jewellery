@@ -1,6 +1,7 @@
 .follow {
   text-align: center;
-  padding-bottom: 131px;
+  padding-top: 42px;
+  padding-bottom: 130px;
 
   @media (max-width: 1023px) {
     padding-bottom: 78px;
@@ -14,6 +15,7 @@
 .follow h2 {
   font-family: var(--font-secondary);
   font-size: 34px;
+  letter-spacing: 0.03em;
 
   @media (max-width: 1023px) {
     margin-bottom: 19px;
@@ -37,7 +39,7 @@
   grid-template-columns: 19.65% 34.1% 19.65% 19.65%;
   column-gap: 27px;
   row-gap: 34px;
-  margin-top: 63px;
+  margin-top: 64px;
 
   @media (max-width: 1023px) {
     column-gap: 16px;
