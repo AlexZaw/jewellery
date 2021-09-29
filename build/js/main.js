@@ -1,4 +1,5 @@
 'use strict';
+
 // const faqList = document.querySelector('.faq ul');
 
 // faqList.addEventListener('click', (evt) => {
@@ -8,6 +9,15 @@
 //   }
 // });
 
+const showSlidesCounter = () =>{
+  const currentSlideIndex = $('.slider__pagination li')
+    .index($('.slider__pagination .slick-active'));
+  const totalPages = $('.slider__pagination').children().length;
+  const countCurrent = $('.slider-counter__current');
+  const countTotal = $('.slider-counter__total');
+  countCurrent.text(currentSlideIndex + 1);
+  countTotal.text(totalPages);
+};
 
 $('.slider__list').slick({
   infinite: true,
@@ -42,10 +52,6 @@ $('.slider__list').slick({
       swipe: true,
     },
   }],
-});
-const suffix = document.querySelector('#suffix').content
-  .querySelector('.slider__pagination-suffix');
+}).slick('refresh');
+$('.slider__list').on('afterChange', showSlidesCounter);
 
-const clone = suffix.cloneNode(true);
-const pagination = document.querySelector('.slider__pagination');
-pagination.insertAdjacentElement('beforeend', clone);
