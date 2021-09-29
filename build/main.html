@@ -95,7 +95,7 @@
         <h1>Perfection <span>made to be yours</span></h1>
       </div>
     </section>
-    <section class="new-products no-js">
+    <section class="new-products">
       <div class="page__container">
         <h2>New In</h2>
         <div class="slider">
@@ -116,52 +116,59 @@
           <a class="link link--underline slider__link" href="#">Shop Now</a>
           <div class="slider__content">
             <ul class="slider__list">
-              <li class="slider__item">
-                <a href="#">Necklace with amethyst
-                  <span>$ 145</span>
-                </a>
-                <div class="slider__image">
-                  <img src="./img/products/purple-gemstone-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+              <li>
+                <div class="slider__item">
+                  <a href="#">Necklace with amethyst
+                    <span>$ 145</span>
+                  </a>
+                  <div class="slider__image">
+                    <img src="./img/products/purple-gemstone-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+                  </div>
                 </div>
               </li>
-              <li class="slider__item">
-                <a href="#">Layered сhoker
-                  <span>$ 115</span>
-                </a>
-                <div class="slider__image">
-                  <img src="./img/products/layered-choker-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+              <li>
+                <div class="slider__item">
+                  <a href="#">Layered сhoker
+                    <span>$ 115</span>
+                  </a>
+                  <div class="slider__image">
+                    <img src="./img/products/layered-choker-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+                  </div>
                 </div>
               </li>
-              <li class="slider__item">
-                <a href="#">Gold chain
-                  <span>$ 215</span>
-                </a>
-                <div class="slider__image">
-                  <img src="./img/products/dainty-gold-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+              <li>
+                <div class="slider__item">
+                  <a href="#">Gold chain
+                    <span>$ 215</span>
+                  </a>
+                  <div class="slider__image">
+                    <img src="./img/products/dainty-gold-necklace-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+                  </div>
                 </div>
               </li>
-              <li class="slider__item">
-                <a href="#">Galaxy earrings
-                  <span>$ 95</span>
-                </a>
-                <div class="slider__image">
-                  <img src="./img/products/galaxy-earrings-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+              <li>
+                <div class="slider__item">
+                  <a href="#">Galaxy earrings
+                    <span>$ 95</span>
+                  </a>
+                  <div class="slider__image">
+                    <img src="./img/products/galaxy-earrings-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="slider__item">
+                  <a href="#">Double pearl earrings
+                    <span>$ 115</span>
+                  </a>
+                  <div class="slider__image">
+                    <img src="./img/products/double-pearl-earrings-desktop@1x.jpg" alt="image of a jewelry item" width="270" height="284">
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="slider__pagination">
-            <ul>
-              <li>
-                <a class="slider__pagination-link" href="#" aria-selected="true"><span class="page__a11y-hidden">page</span>1</a>
-              </li>
-              <li>
-                <a class="slider__pagination-link" href="#"><span class="page__a11y-hidden">page</span>2</a>
-              </li>
-              <li>
-                <a class="slider__pagination-link" href="#"><span class="page__a11y-hidden">page</span>3</a>
-              </li>
-            </ul>
+          <div class="slider__pagination-wrapper">
           </div>
         </div>
       </div>
@@ -378,6 +385,12 @@
       </div>
     </div>
   </footer>
+
+<template id="suffix">
+  <span class="slider__pagination-suffix">of</span>
+
+</template>
+
   <script src="./js/vendor.js"></script>
   <script src="./js/main.js"></script>
 </body>
