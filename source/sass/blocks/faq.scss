@@ -22,6 +22,7 @@
   font-weight: 500;
   line-height: 130%;
   transition: color 0.2s;
+  pointer-events: none;
 
   @media (max-width: 767px) {
     font-size: 16px;
@@ -69,6 +70,11 @@
   align-items: center;
   padding-top: 43px;
 
+  &:hover,
+  &:focus-within {
+    color: var(--c-accent);
+  }
+
   @media (max-width: 767px) {
     padding-top: 16px;
     align-items: start;
@@ -79,6 +85,7 @@
   .no-js & {
     display: none;
   }
+
   width: 15px;
   height: 8px;
   margin-top: -7px;
@@ -90,14 +97,10 @@
   &:hover,
   &:focus {
     outline: none;
-
-    ~ h3 {
-      color: var(--c-accent);
-    }
   }
 
   &::before {
-    content: "";
+    // content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -132,17 +135,13 @@
   }
 }
 
-.faq__question--open svg {
-  transform: rotateX(180deg);
-}
-
 .faq__answer {
   max-width: 527px;
   margin-left: 6px;
   height: 0;
   overflow: hidden;
 
-  .faq__question--open ~ &,
+  .accordeon__item--open &,
   .no-js & {
     height: auto;
   }

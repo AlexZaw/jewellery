@@ -1,0 +1,12 @@
+.accordeon__button,
+.accordeon svg {
+  pointer-events: none;
+}
+
+.accordeon__control {
+  cursor: pointer;
+}
+
+.accordeon__item--open svg {
+  transform: rotateX(180deg);
+}
