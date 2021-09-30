@@ -4,9 +4,38 @@ const filterControl = document.querySelector('.catalog__filters-control');
 const mobileMenuButton = document.querySelector('.page-header__menu-button');
 const loginLinks = document.querySelectorAll('.login-link');
 const accordeons = document.querySelectorAll('.accordeon');
-
+const userData = {
+  email: '',
+};
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
+const isStorage = () => {
+  try{
+    userData.email = localStorage.getItem('userEmail');
+    return true;
+  } catch (err) {
+    return false;
+  }
+};
+const isStorageSupport = isStorage();
+
+const fillForm = (form) => {
+  isStorage();
+  if(userData.email){
+    form['login-email'].value = userData.email;
+  }
+};
+
+const formDataSave = (form) => {
+  if (isStorageSupport) {
+    localStorage.setItem('userEmail', form['login-email'].value);
+  }
+};
+
+const onFormSubmit = (evt) =>{
+  const target = evt.target.closest('form');
+  formDataSave(target);
+};
 const bodyFixPosition = () => {
   setTimeout( () => {
     if ( !document.body.hasAttribute('data-body-scroll-fix') ) {
@@ -131,12 +160,21 @@ const showLoginPopup = (evt) => {
   const loginClone = loginTemplate.cloneNode(true);
   loginClone.classList.add('login--popup');
   loginClone.addEventListener('click', closeLoginPopup);
+  const form = loginClone.querySelector('form');
+  loginClone.querySelector('[type="submit"]').addEventListener('click', onFormSubmit);
   if(mobileMenuParent){
     closeMobileMenu();
   }
   document.body.insertAdjacentElement('afterbegin', loginClone);
+  fillForm(form);
+  if(form['login-email'].value === ''){
+    form['login-email'].focus();
+  }else{
+    form['login-password'].focus();
+  }
   bodyFixPosition();
   document.addEventListener('keydown', closeLoginPopup);
+
 };
 
 loginLinks.forEach((el) =>{
