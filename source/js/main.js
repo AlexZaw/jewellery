@@ -1,11 +1,11 @@
 'use strict';
 document.body.classList.remove('no-js');
 const filterControl = document.querySelector('.catalog__filters-control');
+const mobileMenuButton = document.querySelector('.page-header__menu-button');
 
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
 const bodyFixPosition = () => {
-
   setTimeout( () => {
     if ( !document.body.hasAttribute('data-body-scroll-fix') ) {
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -15,6 +15,8 @@ const bodyFixPosition = () => {
       document.body.style.top = `-${  scrollPosition  }px`;
       document.body.style.left = '0';
       document.body.style.width = '100%';
+      document.body.style.height = '100%';
+
     }
   }, 15 );
 };
@@ -64,6 +66,17 @@ const showFilters = () => {
   }
 };
 
+const openMobileMenu = () => {
+  const mobileMenuParent = document.querySelector('.page-header');
+  if(mobileMenuParent.classList.contains('page-header--menu-open')){
+    bodyUnfixPosition();
+  }else{
+    bodyFixPosition();
+  }
+  mobileMenuParent.classList.toggle('page-header--menu-open');
+
+};
+
 if (filterControl){
   filterControl.addEventListener('click', showFilters);
 }
@@ -88,6 +101,10 @@ const showSlidesCounter = () =>{
   countCurrent.text(currentSlideIndex + 1);
   countTotal.text(totalPages);
 };
+
+if(mobileMenuButton){
+  mobileMenuButton.addEventListener('click', openMobileMenu );
+}
 
 $('.slider__list').slick({
   infinite: true,

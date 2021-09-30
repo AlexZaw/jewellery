@@ -67,10 +67,10 @@
 
     @media (max-width: 1023px) {
       grid-template-columns: 1fr 1fr;
-    }
 
-    :nth-child(n + 3) {
-      display: none;
+      :nth-child(n + 3) {
+        display: none;
+      }
     }
   }
 }
