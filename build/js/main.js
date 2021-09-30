@@ -2,6 +2,8 @@
 document.body.classList.remove('no-js');
 const filterControl = document.querySelector('.catalog__filters-control');
 const mobileMenuButton = document.querySelector('.page-header__menu-button');
+const loginLinks = document.querySelectorAll('.login-link');
+const accordeons = document.querySelectorAll('.accordeon');
 
 const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -16,7 +18,6 @@ const bodyFixPosition = () => {
       document.body.style.left = '0';
       document.body.style.width = '100%';
       document.body.style.height = '100%';
-
     }
   }, 15 );
 };
@@ -66,21 +67,26 @@ const showFilters = () => {
   }
 };
 
+const closeMobileMenu = () => {
+  const mobileMenuParent = document.querySelector('.page-header');
+  bodyUnfixPosition();
+  mobileMenuParent.classList.remove('page-header--menu-open');
+};
+
 const openMobileMenu = () => {
   const mobileMenuParent = document.querySelector('.page-header');
   if(mobileMenuParent.classList.contains('page-header--menu-open')){
-    bodyUnfixPosition();
+    closeMobileMenu();
   }else{
     bodyFixPosition();
+    mobileMenuParent.classList.add('page-header--menu-open');
   }
-  mobileMenuParent.classList.toggle('page-header--menu-open');
-
 };
+
 
 if (filterControl){
   filterControl.addEventListener('click', showFilters);
 }
-const accordeons = document.querySelectorAll('.accordeon');
 
 if(accordeons) {
   accordeons.forEach((accordeon) => {
@@ -105,6 +111,37 @@ const showSlidesCounter = () =>{
 if(mobileMenuButton){
   mobileMenuButton.addEventListener('click', openMobileMenu );
 }
+
+const closeLoginPopup = (evt) => {
+  const closeLogin = document.querySelector('.login__close');
+  const loginPopup = document.querySelector('.login--popup');
+  if(isEscKey(evt) || (evt.type === 'click' && evt.target.classList.contains('login--popup') ||
+  evt.target === closeLogin)){
+    loginPopup.remove();
+    bodyUnfixPosition();
+  }
+};
+
+
+const showLoginPopup = (evt) => {
+  evt.preventDefault();
+  const loginTemplate = document.querySelector('#login-template').content
+    .querySelector('.login');
+  const mobileMenuParent = document.querySelector('.page-header--menu-open');
+  const loginClone = loginTemplate.cloneNode(true);
+  loginClone.classList.add('login--popup');
+  loginClone.addEventListener('click', closeLoginPopup);
+  if(mobileMenuParent){
+    closeMobileMenu();
+  }
+  document.body.insertAdjacentElement('afterbegin', loginClone);
+  bodyFixPosition();
+  document.addEventListener('keydown', closeLoginPopup);
+};
+
+loginLinks.forEach((el) =>{
+  el.addEventListener('click', showLoginPopup);
+});
 
 $('.slider__list').slick({
   infinite: true,
