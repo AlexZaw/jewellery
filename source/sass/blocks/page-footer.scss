@@ -17,8 +17,6 @@
   @media (max-width: 1200px) {
     column-gap: unset;
     grid-template-columns: minmax(min-content, 400px) min-content max-content;
-
-    // grid-template-columns: max-content min-content max-content;
     justify-content: space-between;
   }
 
