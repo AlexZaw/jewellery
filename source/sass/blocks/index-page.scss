@@ -1,0 +1,10 @@
+.index-page__links {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+
+.index-page__links > * + * {
+  margin-left: 20px;
+}
