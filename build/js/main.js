@@ -184,7 +184,7 @@ loginLinks.forEach((el) =>{
 $('.slider__list').slick({
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 2,
+  slidesToScroll: 4,
   arrows: true,
   dots: true,
   swipe: false,
