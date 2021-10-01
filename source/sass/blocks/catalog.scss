@@ -3,10 +3,17 @@
   grid-template-columns: minmax(max-content, 250px) 1fr;
   column-gap: 50px;
   padding-top: 80px;
+  padding-bottom: 73px;
 
   @media (max-width: 1023px) {
     grid-template-columns: 1fr;
     justify-items: center;
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 62px;
   }
 }
 
