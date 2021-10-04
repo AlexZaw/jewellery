@@ -140,7 +140,24 @@ const showSlidesCounter = () =>{
 if(mobileMenuButton){
   mobileMenuButton.addEventListener('click', openMobileMenu );
 }
-
+const switchPopupElement = (evt) =>{
+  const popup = document.querySelector('.login--popup');
+  const elements = popup.querySelector('form').elements;
+  const closeButton = popup.querySelector('.login__close');
+  if (evt.key === 'Tab') {
+    if (evt.shiftKey) {
+      if (evt.target === elements[0]) {
+        evt.preventDefault();
+        closeButton.focus();
+      }
+    } else {
+      if (evt.target === closeButton) {
+        evt.preventDefault();
+        elements[0].focus();
+      }
+    }
+  }
+};
 const checkPopupCoords = () =>{
   const loginPopup = document.querySelector('.login--popup');
   const loginWrapper = document.querySelector('.login__wrapper');
@@ -148,18 +165,18 @@ const checkPopupCoords = () =>{
     loginPopup.classList.add('login--align');
   } else {
     loginPopup.classList.remove('login--align');
+    loginPopup.addEventListener('keydown', switchPopupElement);
   }
 };
 
 const closeLoginPopup = (evt) => {
   const closeLogin = document.querySelector('.login__close');
   const loginPopup = document.querySelector('.login--popup');
-  if(isEscKey(evt) || (evt.type === 'click' && evt.target.classList.contains('login--popup') ||
-  evt.target === closeLogin)){
+  if(isEscKey(evt) || (evt.type === 'click' && (evt.target.classList.contains('login--popup') ||
+  evt.target === closeLogin))){
     loginPopup.remove();
     bodyUnfixPosition();
     window.removeEventListener('resize', checkPopupCoords);
-
   }
 };
 
