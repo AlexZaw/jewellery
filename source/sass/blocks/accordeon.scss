@@ -3,8 +3,31 @@
   pointer-events: none;
 }
 
+.accordeon__button:focus {
+  outline: none;
+}
+
+.accordeon__item {
+  position: relative;
+}
+
 .accordeon__control {
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+.accordeon__item--open .accordeon__control::before {
+  content: none;
 }
 
 .accordeon__item--open svg {
