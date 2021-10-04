@@ -83,11 +83,11 @@
 
   .accordeon__item--open & {
     display: grid;
-    row-gap: 8px;
+    row-gap: 9px;
     height: auto;
-    margin-top: 19px;
+    margin-top: 21px;
     margin-left: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 
     &--range {
       margin-top: 17px;
