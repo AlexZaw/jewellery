@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All jewellery">
   <title>Jewellery</title>
   <link rel="preload" href="./fonts/poppins-v15-latin-500.woff" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
@@ -19,7 +20,7 @@
   <header class="page-header">
     <div class="page__container">
       <div class="page-header__wrapper">
-        <button class="page-header__menu-button">
+        <button class="page-header__menu-button" aria-label="Мобильное меню" aria-expanded="false">
           <svg width="25" height="18" viewbox="0 0 25 18" stroke="currentColor">
             <use xlink:href="./img/sprite_auto.svg#icon-mobile-menu">
             </use>
@@ -93,6 +94,7 @@
     </div>
   </div>
   <section class="catalog">
+    <h2 class="page__a11y-hidden">Product catalog</h2>
     <div class="page__container">
       <div class="catalog__content">
   <button class="catalog__filters-control" type="button">Filter</button>
@@ -101,7 +103,7 @@
           <fieldset class="filter-form__fieldset accordeon__item">
             <div class="filter-form__legend accordeon__control">
               Product
-            <button class="filter-form__accordeon-button accordeon__button" type="button">
+            <button class="filter-form__accordeon-button accordeon__button" type="button" aria-label="Show/hide filters" aria-expanded="false">
               <svg width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)" fill="none">
               <use xlink:href="./img/sprite_auto.svg#icon-cap">
               </use>
@@ -122,7 +124,7 @@
           <fieldset class="filter-form__fieldset accordeon__item">
             <div class="filter-form__legend accordeon__control">
               Material
-            <button class="filter-form__accordeon-button accordeon__button" type="button">
+            <button class="filter-form__accordeon-button accordeon__button" type="button" aria-label="Show/hide filters" aria-expanded="false">
               <svg width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)" fill="none">
               <use xlink:href="./img/sprite_auto.svg#icon-cap">
               </use>
@@ -139,7 +141,7 @@
           <fieldset class="filter-form__fieldset accordeon__item">
             <div class="filter-form__legend accordeon__control">
               Collection
-            <button class="filter-form__accordeon-button accordeon__button" type="button">
+            <button class="filter-form__accordeon-button accordeon__button" type="button" aria-label="Show/hide filters" aria-expanded="false">
               <svg width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)" fill="none">
               <use xlink:href="./img/sprite_auto.svg#icon-cap">
               </use>
@@ -156,7 +158,7 @@
           <fieldset class="filter-form__fieldset accordeon__item">
             <div class="filter-form__legend accordeon__control">
               Price
-            <button class="filter-form__accordeon-button accordeon__button" type="button">
+            <button class="filter-form__accordeon-button accordeon__button" type="button" aria-label="Show/hide filters" aria-expanded="false">
               <svg width="17" height="10" viewbox="0 0 17 10" stroke="var(--c-accent)" fill="none">
               <use xlink:href="./img/sprite_auto.svg#icon-cap">
               </use>
@@ -167,8 +169,8 @@
               <div class="range-slider filter-form__range-slider">
                 <div class="range-slider__track">
                 <div class="range-slider__bar"></div>
-                  <button type="button" class="range-slider__thumb range-slider__thumb--a"></button>
-                  <button type="button" class="range-slider__thumb range-slider__thumb--b"></button>
+                  <button type="button" class="range-slider__thumb range-slider__thumb--a" aria-label="Range thumb a"></button>
+                  <button type="button" class="range-slider__thumb range-slider__thumb--b" aria-label="Range thumb b"></button>
                 </div>
                 <div class="range-slider__output">
                   <label class="range-slider__price range-slider__price--min">

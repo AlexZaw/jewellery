@@ -100,6 +100,8 @@ const closeMobileMenu = () => {
   const mobileMenuParent = document.querySelector('.page-header');
   bodyUnfixPosition();
   mobileMenuParent.classList.remove('page-header--menu-open');
+  mobileMenuButton.setAttribute('aria-expanded', false);
+
 };
 
 const openMobileMenu = () => {
@@ -109,6 +111,8 @@ const openMobileMenu = () => {
   }else{
     bodyFixPosition();
     mobileMenuParent.classList.add('page-header--menu-open');
+    mobileMenuButton.setAttribute('aria-expanded', true);
+
   }
 };
 
@@ -122,7 +126,14 @@ if(accordeons) {
     accordeon.addEventListener('click', (evt) => {
       const target = evt.target;
       if(target.classList.contains('accordeon__control') || target.classList.contains('accordeon__button')){
-        target.closest('.accordeon__item').classList.toggle('accordeon__item--open');
+        const parent = target.closest('.accordeon__item');
+        // target.closest('.accordeon__item').classList.toggle('accordeon__item--open');
+        parent.classList.toggle('accordeon__item--open');
+        if(parent.classList.contains('accordeon__item--open')){
+          parent.querySelector('.accordeon__button').setAttribute('aria-expanded', true);
+        } else {
+          parent.querySelector('.accordeon__button').setAttribute('aria-expanded', false);
+        }
       }
     });
   });
