@@ -50,9 +50,9 @@
   &--links {
     display: grid;
     grid-template-columns: max-content max-content;
-
     column-gap: 73px;
     align-self: start;
+    align-items: start;
 
     @media (max-width: 1200px) {
       column-gap: 40px;
