@@ -229,4 +229,8 @@
   @media (min-width: 1024px) {
     display: none;
   }
+
+  @media (max-width: 767px) {
+    transform: translate(15%, -50%);
+  }
 }
