@@ -16,10 +16,12 @@
 .login__wrapper {
   position: relative;
   max-width: 430px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 138px;
   padding-left: 45px;
   padding-right: 45px;
+  padding-bottom: 40px;
   background-image: image-set(url("../img/login/login-bg-desktop@2x.jpg") 2x, url("../img/login/login-bg-desktop@1x.jpg") 1x);
   /* stylelint-disable-next-line */
   background-image: image-set(url("../img/login/login-bg-desktop@2x.webp") 2x, url("../img/login/login-bg-desktop@1x.webp") 1x);
@@ -29,14 +31,17 @@
   background-size: 100% auto;
 
   .no-webp & {
-  background-image: image-set(url("../img/login/login-bg-desktop@2x.jpg") 2x, url("../img/login/login-bg-desktop@1x.jpg") 1x);
+    background-image: image-set(url("../img/login/login-bg-desktop@2x.jpg") 2x, url("../img/login/login-bg-desktop@1x.jpg") 1x);
   }
 
   .webp & {
-  background-image: image-set(url("../img/login/login-bg-desktop@2x.webp") 2x, url("../img/login/login-bg-desktop@1x.webp") 1x);
+    background-image: image-set(url("../img/login/login-bg-desktop@2x.webp") 2x, url("../img/login/login-bg-desktop@1x.webp") 1x);
   }
 
   @media (max-width: 1023px) {
+    max-width: 442px;
+    padding-left: 51px;
+    padding-right: 51px;
     background-image: image-set(url("../img/login/login-bg-tablet@2x.jpg") 2x, url("../img/login/login-bg-tablet@1x.jpg") 1x);
     /* stylelint-disable-next-line */
     background-image: image-set(url("../img/login/login-bg-tablet@2x.webp") 2x, url("../img/login/login-bg-tablet@1x.webp") 1x);
@@ -56,6 +61,7 @@
     padding-top: 84px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 25px;
     background-image: image-set(url("../img/login/login-bg-mobile@2x.jpg") 2x, url("../img/login/login-bg-mobile@1x.jpg") 1x);
     /* stylelint-disable-next-line */
     background-image: image-set(url("../img/login/login-bg-mobile@2x.webp") 2x, url("../img/login/login-bg-mobile@1x.webp") 1x);
