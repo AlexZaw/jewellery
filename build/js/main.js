@@ -141,6 +141,16 @@ if(mobileMenuButton){
   mobileMenuButton.addEventListener('click', openMobileMenu );
 }
 
+const checkPopupCoords = () =>{
+  const loginPopup = document.querySelector('.login--popup');
+  const loginWrapper = document.querySelector('.login__wrapper');
+  if(parseInt(getComputedStyle(loginWrapper).height, 10) > document.documentElement.clientHeight){
+    loginPopup.classList.add('login--align');
+  } else {
+    loginPopup.classList.remove('login--align');
+  }
+};
+
 const closeLoginPopup = (evt) => {
   const closeLogin = document.querySelector('.login__close');
   const loginPopup = document.querySelector('.login--popup');
@@ -148,6 +158,8 @@ const closeLoginPopup = (evt) => {
   evt.target === closeLogin)){
     loginPopup.remove();
     bodyUnfixPosition();
+    window.removeEventListener('resize', checkPopupCoords);
+
   }
 };
 
@@ -174,7 +186,8 @@ const showLoginPopup = (evt) => {
   }
   bodyFixPosition();
   document.addEventListener('keydown', closeLoginPopup);
-
+  window.addEventListener('resize', checkPopupCoords);
+  checkPopupCoords();
 };
 
 loginLinks.forEach((el) =>{
