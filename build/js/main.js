@@ -121,7 +121,6 @@ if(accordeons) {
   accordeons.forEach((accordeon) => {
     accordeon.addEventListener('click', (evt) => {
       const target = evt.target;
-      console.log(target);
       if(target.classList.contains('accordeon__control') || target.classList.contains('accordeon__button')){
         target.closest('.accordeon__item').classList.toggle('accordeon__item--open');
       }
