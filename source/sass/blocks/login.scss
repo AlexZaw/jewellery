@@ -110,6 +110,7 @@
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid currentColor;
+  border-radius: 0;
 
   &:not(:last-of-type) {
     margin-bottom: 34px;
