@@ -109,7 +109,6 @@
   }
 }
 
-
 .filter-form__controls input:not([type="number"]) {
   position: fixed;
   transform: scale(0);
@@ -120,7 +119,7 @@
   }
 }
 
-.filter-form__controls label {
+.filter-form__control label {
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -129,9 +128,7 @@
   @media (max-width: 1023px) {
     font-size: 16px;
   }
-}
 
-.filter-form__controls [type="checkbox"] + label {
   &::before {
     content: "";
     display: inline-block;
